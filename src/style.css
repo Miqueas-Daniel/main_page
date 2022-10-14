@@ -753,10 +753,16 @@
 
 
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 570px) {
     .nav {
         justify-content: center;
         padding: 0;
+    }
+    
+    .nav__ul {
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     .info__paragraph {
