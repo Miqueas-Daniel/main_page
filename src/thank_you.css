@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: #fff;
+    overflow: hidden;
+}
+
+.container__card__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container__card__img::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    z-index: 200;
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 500;
+}
+
+.card__title {
+    padding: 80px 10px 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    text-shadow: 0 0 4px #0009;
+}
+
+.card__container__button {
+    width: 100%;
+    height: calc(100% - 125px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__return {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: transform .3s ease;
+    animation: button-opacity 2s infinite linear;
+}
+
+@keyframes button-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.return__link {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.name {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 500;
+}
+
+
+
+
+
+@media screen and (min-width: 550px) {
+    .card__title {
+        font-size: 1.6rem;
+    }
+
+    .card__container__button {
+        height: calc(100% - 135px);
+    }
+
+    .return__link {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 850px) {
+    .card__title {
+        font-size: 2rem;
+    }
+
+    .card__container__button {
+        height: calc(100% - 140px);
+    }
+
+    .return__link {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .card {
+        height: 100%;
+    }
+
+    .card__container__button {
+        height: calc(100% - 150px);
+    }
+
+    .btn__return:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .card__title {
+        font-size: 2.2rem;
+    }
+
+    .return__link {
+        font-size: 1.4rem;
+    }
+}
