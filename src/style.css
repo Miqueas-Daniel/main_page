@@ -432,13 +432,6 @@
     cursor: pointer;
     font-size: 1.05rem;
     border-radius: 3px;
-    opacity: .8;
-    transition: all .4s ease;
-}
-
-.footer__network:hover {
-    transform: translateY(-5px);
-    opacity: 1;
 }
 
 .footer__network:nth-child(1) {
@@ -632,6 +625,17 @@
 @media screen and (min-width: 1200px) {
     .background__job {
         width: calc(100vw - 15px);
+    }
+    
+    .footer__network {
+        opacity: .8;
+        transition: .4s ease;
+        transition-property: transform, opacity;
+    }
+    
+    .footer__network:hover {
+        transform: translateY(-5px);
+        opacity: 1;
     }
 }
 
